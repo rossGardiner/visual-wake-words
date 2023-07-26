@@ -2,8 +2,8 @@
 source config.cfg
 
 for((i = 0; i < ${#MODEL_NAMES[@]}; i++)); do
-    for((j = 0; j < ${#IMAGE_SIZE[@]}; j++)); do
-        for ((k = 0; k < ${#USE_GREYSCALE[@]}; k++)); do
+    for((j = 0; j < ${#IMAGE_SIZES[@]}; j++)); do
+        for ((k = 0; k < ${#USE_GRAYSCALE[@]}; k++)); do
 
             python /tf/models/research/slim/train_image_classifier.py \
                 --train_dir="${TRAINING_DIR}/${TRAINING_NAME}_${MODEL_NAMES[i]}_${IMAGE_SIZES[j]}_${USE_GRAYSCALE[k]}" \
