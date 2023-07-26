@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     git \
     xxd
 
-RUN git clone https://github.com/tensorflow/models.git 
+RUN git clone https://github.com/rossGardiner/models.git
 
 RUN pip3 install --upgrade pip
 
