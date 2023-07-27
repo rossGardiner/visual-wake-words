@@ -21,6 +21,7 @@ for value in "${MODEL_NAMES[@]}"; do
     esac
 done
 
+export TF_FORCE_GPU_ALLOW_GROWTH="true"
 
 for((i = 0; i < ${#MODEL_NAMES[@]}; i++)); do
     for((j = 0; j < ${#IMAGE_SIZES[@]}; j++)); do
